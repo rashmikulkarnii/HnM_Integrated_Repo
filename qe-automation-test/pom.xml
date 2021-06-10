@@ -195,7 +195,7 @@
 		</dependency>
 		<!-- Date Time support -->
 		<dependency>
-			<groupId>aso</groupId>
+			<groupId>HnM</groupId>
 			<artifactId>qe-automation-framework</artifactId>
 			<version>1.0.1</version>
 		</dependency>

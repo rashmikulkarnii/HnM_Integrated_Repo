@@ -1,0 +1,9 @@
+Feature: To Verify the Sanity of the ASO build
+
+  @Sanity  
+  Scenario: Verify Navigation from Homepage to L1
+    Given user launches the browser and navigates to "HnM_Home" page
+    When user clicks on one of the category and navigates to LOne page 
+    Then User should be able to see L1 Page
+    
+ 

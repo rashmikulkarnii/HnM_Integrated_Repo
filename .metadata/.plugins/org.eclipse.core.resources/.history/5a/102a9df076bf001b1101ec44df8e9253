@@ -1,0 +1,38 @@
+package com.HnM.qe.test.stepdefinition.web;
+
+import static org.junit.Assert.assertTrue;
+
+import org.openqa.selenium.support.PageFactory;
+
+import com.HnM.qe.framework.common.CommonActionHelper;
+import com.HnM.qe.test.pageobject.GlobalElementHeader_HomePO;
+import com.HnM.qe.test.pageobject.HnM_Home_PagePO;
+import com.HnM.qe.test.pageobject.SearchProductPO;
+
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class HnM_Home_Page extends CommonActionHelper{
+	HnM_Home_PagePO homePage = PageFactory.initElements(driver, HnM_Home_PagePO.class);
+
+	
+
+	
+
+@Then("^User clicks on Customer Service Link$")
+public void user_clicks_on_Customer_Service_Link() throws Throwable {
+   
+}
+
+	
+	
+	@Then("^User should be able to see L1 Page$")
+	public void user_should_be_able_to_see_L1_Page() throws Throwable {
+		globalElementHeader.verifypresenceofL1Page();
+				 
+		 
+	}
+	
+}

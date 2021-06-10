@@ -1,0 +1,48 @@
+package com.aso.qe.test.stepdefinition.web;
+
+import org.apache.log4j.Logger;
+import org.openqa.selenium.support.PageFactory;
+
+import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.test.pageobject.SearchProductPO;
+
+import cucumber.api.PendingException;
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
+
+public class R1SP1_KER_1955_Web_SD extends CommonActionHelper{
+	private static final Logger logger = Logger.getLogger(R1SP1_KER_1955_Web_SD.class);
+	SearchProductPO searchProductPO = PageFactory.initElements(getDriver(), SearchProductPO.class);;
+
+
+	@And("^User selects Required product in Product Listing Page$")
+	public void user_selects_Required_product_in_Product_Listing_Page() throws Throwable {
+	   logger.debug("selecting requried product from L3 page::");
+	   
+		clickOnButton(searchProductPO.productList.get(0));
+	}
+	
+	@Then("^User should be select the color$")
+	public void user_should_be_select_the_color() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^User should be select the size$")
+	public void user_should_be_select_the_size() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^User should be select the Quantity$")
+	public void user_should_be_select_the_Quantity() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+
+	@Then("^User clicks on AddToCart Button$")
+	public void user_clicks_on_AddToCart_Button() throws Throwable {
+	    // Write code here that turns the phrase above into concrete actions
+	    throw new PendingException();
+	}
+}

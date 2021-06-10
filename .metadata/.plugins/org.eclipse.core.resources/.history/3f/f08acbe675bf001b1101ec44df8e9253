@@ -1,0 +1,1358 @@
+package com.HnM.qe.test.pageobject;
+
+import static org.junit.Assert.assertTrue;
+import static org.testng.Assert.assertEquals;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.UUID;
+
+import org.apache.log4j.Logger;
+import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
+
+import com.HnM.qe.framework.common.CommonActionHelper;
+
+public class HnM_Home_PagePO extends CommonActionHelper {
+	private static final Logger logger = Logger.getLogger(HnM_Home_PagePO.class);
+	
+	
+	
+		
+	@FindBy(xpath="//a[@data-auid='logo']")public WebElement imgAcademyLogo;
+	@FindBy(xpath="//button[@data-auid='submitSearchButton_m']") public  WebElement btnSearchLens;
+	@FindBy(xpath="//div[@class='a-findAStore']//span[text()='Find a store']")  public  WebElement txtFindAStore;
+	@FindBy(xpath="//a[@data-auid='weeklyAds_m']") public  WebElement txtWeeklyADBurgerMenu;
+	@FindBy(xpath="//button[@data-auid='hamburgerMenuToggleBtn_m']") public WebElement btnBurgerMenu;
+	@FindBy(xpath="//button[@data-auid='hamburgerMenuToggleBtn_m']")  public WebElement btnXBurgerMenu;
+	@FindBy(id="*********") WebElement btnMyAccount;
+	//@FindBy(id="*********") WebElement btnSignIn;
+	@FindBy(xpath="//a[@data-auid=\"level1Category-SHOP\"]") public WebElement btnShopCategory;
+	@FindBy(xpath="//a[@data-auid='level2Category-CLOTHING_m'] | //a[@data-auid='level2Category-CLOTHING']")public WebElement btnClothingCategory;
+	@FindBy(xpath="//a[@data-auid='level3Category-Mens']")public WebElement btnMens_Clothing_Shop;
+//	@FindBy(xpath="//li[@data-auid='l1Category 2']/a") WebElement lnkClothingHovering;
+	@FindBy(xpath="//a[@data-auid='level3Category-Mens_m']/*")public WebElement btnMen_Clothing_Shop;
+	//@FindBy(xpath="//a[@data-auid=\"level4Category-Men's Shirts_m\"]")public WebElement btnMensShirt_Men_Clothing_Shop;shopByCategory_0
+	@FindBy(xpath="//a[@data-auid='level4Category-Shirts_m'] | //a[@data-auid='level4Category-Shirts']")public WebElement btnMensShirt_Men_Clothing_Shop;
+	@FindBy(xpath="(//a[contains(@data-auid,'productCard_')])[3]")public WebElement imgMensShortShirt; 
+	//@FindBy(xpath="//a[text()='Athletic Clothing']") public WebElement lnkMensShirts;
+	@FindBy(xpath="(//span[@class='line-separator'])[3]/following::span") public WebElement lnkMensShirts;
+	//@FindBy(xpath="//span[text()='Athletic Clothing']") public WebElement lnkMensShirtsnotclickable;
+	@FindBy(xpath="(//span[@class='line-separator'])[3]/following::span") public WebElement lnkMensShirtsnotclickable;
+	@FindBy(xpath="//a[text()=\"Father's Day Gifts\"]") public WebElement lnkMensClothing;
+	@FindBy(xpath="//span[text()=\"Father's Day Gifts\"]") public WebElement lnkMensClothingnotclickable;
+	
+	
+	
+	
+	
+	
+	
+		
+		
+	
+		
+	
+		
+			
+	
+
+		
+		
+		public void validationmessage(String exceptederrormessage) throws Exception {
+			String actualexceptederrormessageTxt = getText(errormessage);
+			logger.debug("errormessage:: " + actualexceptederrormessageTxt);
+			Assert.assertEquals(actualexceptederrormessageTxt, exceptederrormessage);
+		}
+
+		public void validationmessage_email(String exceptederrormessage) throws Exception {
+			String actualexceptederrormessageTxt = getText(errormessage_email);
+			logger.debug("errormessage:: " + actualexceptederrormessageTxt);
+			Assert.assertEquals(actualexceptederrormessageTxt, exceptederrormessage);
+		}
+		public void validationmessage_password(String exceptederrormessage) throws Exception {
+			String actualexceptederrormessageTxt = getText(errormessage_password);
+			logger.debug("errormessage:: " + actualexceptederrormessageTxt);
+			Assert.assertEquals(actualexceptederrormessageTxt, exceptederrormessage);
+		}
+		
+		public void personalInformationDeatils(String exceptedPersonalInformationTxt) throws Exception {
+			String actualPersonalInformationTxt = getText(personalInformationTxt);
+			logger.debug("personalInformationTxt:: " + actualPersonalInformationTxt);
+			Assert.assertEquals(actualPersonalInformationTxt, exceptedPersonalInformationTxt);
+		}
+
+		public void addressBookDeatils(String exceptedAddressBookTxt) throws Exception {
+			String actualAddressBookTxt = getText(addressBookTxt);
+			logger.debug("addressbookTxt:: " + actualAddressBookTxt);
+			Assert.assertEquals(actualAddressBookTxt, exceptedAddressBookTxt);
+		}
+
+		public void wishlistsDeatils(String exceptedWishlistsTxt) throws Exception {
+			String actualWishlistsTxt = getText(wishlistsTxt);
+			logger.debug("WishListsTxt:: " + actualWishlistsTxt);
+			Assert.assertEquals(actualWishlistsTxt, exceptedWishlistsTxt);
+		}
+
+		public void clickMyAccountDropDown() throws Exception {
+
+			assertTrue(clickOnButton(myAccountDropDown));
+
+		}
+		public void clickSignoutFromMyAccount() throws Exception {
+
+			assertTrue(clickOnButton(btnsignout));
+
+		}
+		
+		public void clickSignoutFromMyAccount_Mobile() throws Exception {
+
+			assertTrue(clickOnButton(btnsignout_mobile));
+
+		}
+		public void clickOnWishListsFromMyAccount() throws Exception {
+
+			assertTrue(clickOnButton(wishListFromMyAccount));
+
+		}
+		public void clickOnWishListsFromMyAccount_Mobile() throws Exception {
+
+			assertTrue(clickOnButton(wishListFromMyAccount_Mobile));
+
+		}
+		public void clickOnAccountSummaryFromMyAccount() throws Exception {
+
+			assertTrue(clickOnButton(accountSummaryFromMyAccount));
+
+		}
+		public void clickOnAccountSummaryFromMyAccount_mobile() throws Exception {
+
+			assertTrue(clickOnButton(accountSummaryFromMyAccount_Mobile));
+
+		}
+		public void clickSignInLink() throws Exception {
+
+			assertTrue(clickOnButton(btnSignIn));
+
+		
+		}
+		
+		public void clickSignInLink_mobile() throws Exception {
+
+			
+			assertTrue(clickOnButton(btnSignIn_Mobile));
+			/*setInputText(enteremail, "rashika.kowtikwar@gmail.com");
+			setInputText(enterpostal, "560035");
+			WebElement webElement = driver.findElementByXPath("//input[@type='submit']");
+			webElement.sendKeys(Keys.TAB);
+			//assertTrue(clickOnButton(clicksubmit));
+			assertTrue(clickOnButton(btnBurgerMenu));
+			assertTrue(clickOnButton(btnSignIn_Mobile));*/
+			
+		}
+		
+
+		public void clickForgotYourPassword() throws Exception {
+
+			assertTrue(clickOnButton(lnkForgotYourPassword));
+
+		}
+
+		public void clickSignupLink() throws Exception {
+
+			assertTrue(clickOnButton(lnkSignUp));
+
+		}
+
+		public void enterInvalidEmailAddressandPassword() throws Exception {
+
+			setInputText(txtEmailAddress, "rashika@gmail.com");
+			setInputText(txtPassword, "rashika@123");
+
+		}
+
+		public void enterEmptyEmailAddress() throws Exception {
+System.out.println("before88888888888888888888888");
+			setInputText(txtEmailAddress, "");
+			//setInputText(txtPassword, "");
+			System.out.println("after88888888");
+		}
+
+		public void enterEmailAddressandPassword() throws Exception {
+
+			setInputText(txtEmailAddress, "rashika.kowtikwar@gmail.com");
+			setInputText(txtPassword, "rashika@123");
+
+		}
+		
+		public void enterEmailAddress() throws Exception {
+
+			setInputText(txtEmailAddress, "rashika.kowtikwar@gmail.com");
+			//setInputText(txtPassword, "rashika@123");
+
+		}
+		public void enterEmailAddress_signup() throws Exception {
+			
+			 UUID uuid = UUID.randomUUID();
+		     String randomUUIDString = uuid.toString();
+		     
+		     String txtemailaddress_random="abc"+randomUUIDString+"@gmail.com";
+
+			setInputText(txtEmail, txtemailaddress_random);
+
+		}
+		public void enterForgotEmail() throws Exception {
+
+			setInputText(txtForgotEmail, "abcd@gmail.com");
+
+		}
+
+		public void enterEmail() throws Exception {
+
+			setInputText(txtEmail, "abcd@gmail.com");
+
+		}
+
+		public void enterFirstName() throws Exception {
+
+			setInputText(txtFirstName, "Rashika");
+
+			
+		}
+
+		public void enterLastName() throws Exception {
+
+			setInputText(txtLastName, "Kowtikwar");
+
+			
+		}
+
+		public void enterPassword() throws Exception {
+
+			setInputText(txtPassword, "rashika@123");
+
+			
+		}
+
+		public void enterPasswordForSignUp() throws Exception {
+
+			setInputText(txtPasswordForSignUp, "abcd@123");
+
+			
+		}
+
+		public void enterConfirmPassword() throws Exception {
+
+			setInputText(txtConfirmPassword, "abcd@123");
+
+				}
+
+		public void enterInvalidPassword() throws Exception {
+
+			setInputText(txtPassword, "123456");
+
+			
+		}
+
+		public void enterEmptyPassword() throws Exception {
+
+			setInputText(txtPassword, "");
+
+			
+		}
+
+		public void clickSubmitButton() throws Exception {
+
+			assertTrue(clickOnButton(btnSubmit));
+			
+		}
+
+		public void clickPersonalInformationLink() throws Exception {
+
+			
+			assertTrue(clickOnButton(lnkPersonalInformation));
+
+		}
+		public void clickPersonalInformationLink_Mobile() throws Exception {
+
+			assertTrue(clickOnButton(myAccountMenu));
+			assertTrue(clickOnButton(lnkPersonalInformation));
+
+		}
+		public void clickAddressBookLink() throws Exception {
+
+			assertTrue(clickOnButton(lnkAddressBookInformation));
+
+		}
+		public void clickAddressBookLink_Mobile() throws Exception {
+			assertTrue(clickOnButton(myAccountMenu));
+			assertTrue(clickOnButton(lnkAddressBookInformation));
+
+		}
+		public void clickWishlistsLink() throws Exception {
+
+			assertTrue(clickOnButton(lnkwishlistsInformation));
+
+		}
+
+		public void clickWishlistsLink_Mobile() throws Exception {
+			assertTrue(clickOnButton(myAccountMenu));
+			assertTrue(clickOnButton(lnkwishlistsInformation));
+
+		}
+
+		public void clickForgotPasswordSubmitButton() throws Exception {
+
+			
+			assertTrue(clickOnButton(btnForgotPasswordSubmit));
+			
+		}
+
+		public void clickOnSignUpButton() throws Exception {
+
+			
+			assertTrue(clickOnButton(btnSignupbutton));
+			
+		}
+
+		public void verifypresenceofsigninlink() throws Exception {
+			if("mobile".equalsIgnoreCase(testtype)){
+				isDisplayed(btnSignIn);
+				assertTrue(isClickable(btnSignIn_Mobile));
+				logger.debug("our history link is not displayed");
+			}else {
+				isDisplayed(btnSignIn);
+				assertTrue(isClickable(btnSignIn));
+				logger.debug("our history link is displayed++++++++++++++++++++++++==");
+			}
+		}
+		public void clickASO_LOGO() throws Exception{
+			isDisplayed(imgAcademyLogo);
+			assertTrue(isClickable(imgAcademyLogo));
+			//assertEquals("http://35.202.244.154/", getCurrentPageURL());
+		}
+
+		public void verifypresenceoffacebookicon() throws Exception {
+			if("mobile".equalsIgnoreCase(testtype)){
+				isDisplayed(iconfacebook);
+				assertTrue(isClickable(iconfacebook));
+				logger.debug("our history link is not displayed");
+			}else {
+				isDisplayed(iconfacebook);
+				assertTrue(isClickable(iconfacebook));
+				logger.debug("our history link is displayed++++++++++++++++++++++++==");
+			}
+		}
+		public void verifypresenceofpinteresticon() throws Exception {
+			if("mobile".equalsIgnoreCase(testtype)){
+				isDisplayed(iconpinterest);
+				assertTrue(isClickable(iconpinterest));
+				logger.debug("our history link is not displayed");
+			}else {
+				isDisplayed(iconpinterest);
+				assertTrue(isClickable(iconpinterest));
+				logger.debug("our history link is displayed++++++++++++++++++++++++==");
+			}
+		}
+		
+		public void verifypresenceoftwittericon() throws Exception {
+			if("mobile".equalsIgnoreCase(testtype)){
+				isDisplayed(icontwitter);
+				assertTrue(isClickable(icontwitter));
+				logger.debug("our history link is not displayed");
+			}else {
+				isDisplayed(icontwitter);
+				assertTrue(isClickable(icontwitter));
+				logger.debug("our history link is displayed++++++++++++++++++++++++==");
+			}
+		}
+		public void verifypresenceofyoutubeicon() throws Exception {
+			if("mobile".equalsIgnoreCase(testtype)){
+				isDisplayed(iconinstagram);
+				assertTrue(isClickable(iconinstagram));
+				logger.debug("our history link is not displayed");
+			}else {
+				isDisplayed(iconinstagram);
+				assertTrue(isClickable(iconinstagram));
+				logger.debug("our history link is displayed++++++++++++++++++++++++==");
+			}
+		}
+		public void verifypresenceofinstagramicon() throws Exception {
+			if("mobile".equalsIgnoreCase(testtype)){
+				isDisplayed(iconinstagram);
+				assertTrue(isClickable(iconinstagram));
+				logger.debug("our history link is not displayed");
+			}else {
+				isDisplayed(iconinstagram);
+				assertTrue(isClickable(iconinstagram));
+				logger.debug("our history link is displayed++++++++++++++++++++++++==");
+			}
+		}
+	/*public GlobalElementHeader_HomePO(WebDriver driver) {
+
+	}*/
+	//		PageFactory.initElements(driver, this);
+
+
+	public void navigateToPLPFromHomePageViaSearch() throws Exception{
+
+		setInputText(txtSearchBox, "Men's Shoes");
+		assertTrue(clickOnButton(btnGO));
+		//Assert.assertEquals("validating the PLP PAGE","Men's Shoes");//Framework Method need to be used
+	}
+
+	public void navigateToPLPViaClick_Desktop() throws Exception{
+		
+		assertTrue(clickOnButton(btnShopCategory));
+		Actions hover = new Actions(getDriver());
+		hover.moveToElement(btnClothingCategory).build().perform();
+		//assertTrue(clickOnButton(btnMen_Clothing_Shop));
+		assertTrue(clickOnButton(btnMensShirt_Men_Clothing_Shop));
+	}
+	
+	public void navigateToL2ViaClick_Desktop() throws Exception{
+		
+		assertTrue(clickOnButton(btnShopCategory));
+		Actions hover = new Actions(getDriver());
+		hover.moveToElement(btnClothingCategory).build().perform();
+		assertTrue(clickOnButton(btnMensShirt_Men_Clothing_Shop));
+	}
+
+	public void navigateToPLPViaClick_Mobile() throws Exception{
+	
+		assertTrue(clickOnButton(btnBurgerMenu));
+		//assertTrue(clickOnButton(btnShopCategory));
+		assertTrue(clickOnButton(btnClothingCategory));
+		assertTrue(clickOnButton(btnMen_Clothing_Shop));
+		assertTrue(clickOnButton(btnMensShirt_Men_Clothing_Shop));
+	}
+
+	public void navigateToL2PageViaClick_Mobile() throws Exception{
+		
+		assertTrue(clickOnButton(btnBurgerMenu));
+		//assertTrue(clickOnButton(btnShopCategory));
+		assertTrue(clickOnButton(btnClothingCategory));
+		assertTrue(clickOnButton(btnMen_Clothing_Shop));
+		assertTrue(clickOnButton(btnMen_Clothing_Shop));
+	}
+
+	public void validateASO_LOGOPresence() throws Exception{
+		//scrollPageToWebElement(imgAcademyLogo);
+		if(isDisplayed(imgAcademyLogo))
+			logger.debug("Academy logo is displayed");	
+		else
+			logger.debug("Academy logo is NOT displayed");	
+
+
+	}
+	public void clickASO_LOGOAndValidateHomePage() throws Exception{
+
+		assertTrue(clickOnButton(imgAcademyLogo));
+		//assertEquals("http://35.202.244.154/", getCurrentPageURL());
+	}
+
+	public void validatingWeeklyAdAndFindStore() throws Exception{
+
+		//	Assert.assertEquals("Validating the presence for txt Weekly Ad");//Framework Method need to be used
+		//	Assert.assertEquals("Validating the presence for txt Find A Store");//Framework Method need to be used
+	}
+
+	public void validatingTxtSearchBox() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(txtSearchBox_mobile);
+			logger.debug("txtSearchBox is displayed");
+		}else {
+			isDisplayed(txtSearchBox);
+			logger.debug("txtSearchBox is displayed");
+		}
+		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
+
+	}
+	
+	public void entertheSearchData() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			Actions actions = new Actions(driver);
+			actions.moveToElement(txtSearchBox_mobile);
+			actions.click();
+			actions.sendKeys("Magellan Outdoors Men's Eagle Pass Deluxe Long Sleeve Shirt");
+			actions.build().perform();
+		}else {
+			
+			Actions actions = new Actions(driver);
+			actions.moveToElement(txtSearchBox);
+			actions.click();
+			//actions.sendKeys("Magellan Outdoors Men's Eagle Pass Deluxe Long Sleeve Shirt");
+			actions.sendKeys("Magellan Outdoors Men's Eagle Pass Deluxe Shirt");
+			actions.build().perform();
+			
+		}
+	
+	}
+	
+	
+	
+	public void entertheData() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			Actions actions = new Actions(driver);
+			actions.moveToElement(txtSearchBox_mobile);
+			actions.click();
+			actions.sendKeys("Clothing");
+			actions.build().perform();
+		}else {
+			
+			Actions actions = new Actions(driver);
+			actions.moveToElement(txtSearchBox);
+			actions.click();
+			actions.sendKeys("Clothing");
+			actions.build().perform();
+			
+		}
+	
+	}
+	public void entertheSearchDataForPagination() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			Actions actions = new Actions(driver);
+			actions.moveToElement(txtSearchBox_mobile);
+			actions.click();
+			actions.sendKeys("Running Shoes");
+			actions.build().perform();
+			assertTrue(clickOnButton(btnGO_mobile));
+			//scrollPageToWebElement(btnNext);
+			assertTrue(clickOnButton(btnNext));
+			//scrollPageToWebElement(btnNext);
+			assertTrue(clickOnButton(btnNext));
+		}else {
+			
+			Actions actions = new Actions(driver);
+			actions.moveToElement(txtSearchBox);
+			actions.click();
+			actions.sendKeys("Running Shoes");
+			actions.build().perform();
+			assertTrue(clickOnButton(btnGO));
+			scrollPageToWebElement(btnNext);
+			assertTrue(clickOnButton(btnNext));
+			scrollPageToWebElement(btnNext);
+			assertTrue(clickOnButton(btnNext));
+		}
+	
+	}
+	public void entertheNullData() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			Actions actions = new Actions(driver);
+			actions.moveToElement(txtSearchBox_mobile);
+			actions.click();
+			actions.sendKeys("null");
+			actions.build().perform();
+		}else {
+			
+			Actions actions = new Actions(driver);
+			actions.moveToElement(txtSearchBox);
+			actions.click();
+			actions.sendKeys("null");
+			actions.build().perform();
+			
+		}
+	
+	}
+	public void entertheColor() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			Actions actions = new Actions(driver);
+			actions.moveToElement(txtSearchBox_mobile);
+			actions.click();
+			actions.sendKeys("red");
+			actions.build().perform();
+		}else {
+			
+			Actions actions = new Actions(driver);
+			actions.moveToElement(txtSearchBox);
+			actions.click();
+			actions.sendKeys("red");
+			actions.build().perform();
+			
+		}
+	
+	}
+	public void clickOnButton() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			assertTrue(clickOnButton(btnGO_mobile));
+			logger.debug("btnGO is clicked");
+		}else {
+			
+			assertTrue(clickOnButton(btnGO));
+			logger.debug("btnGO is clicked");
+		}
+		
+	}
+	
+	public void clickClearAllButton() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			Actions actions = new Actions(driver);
+			actions.moveToElement(txtSearchBox_mobile);
+			actions.click();
+			actions.sendKeys(" ");
+			
+			actions.build().perform();
+			assertTrue(clickOnButton(btnClearAll));
+			logger.debug("btnClearAll is clicked");
+		}else {
+			Actions actions = new Actions(driver);
+			actions.moveToElement(txtSearchBox);
+			actions.click();
+			actions.sendKeys("");
+			actions.build().perform();
+			assertTrue(clickOnButton(btnClearAll));
+			logger.debug("btnClearAll is clicked");
+		}
+		
+	}
+	public void verifyThePDPPage() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			assertTrue(isDisplayed(description));
+			logger.debug("Description is displayed");
+		}else {
+			
+			assertTrue(isDisplayed(description));
+			logger.debug("Description is displayed");
+		}
+		
+	}
+	
+	
+	
+	public void clickOnSuggestion(String searchItemTxt) throws Exception{
+				
+			
+			String searchItemXpath = "//a[contains(@data-auid,'"+searchItemTxt+"')]";
+			System.out.println("&&&&&&&&&&**********************searchItemXpath:: "+searchItemXpath);
+			assertTrue(clickOnButton(getfindElementByXPath(searchItemXpath)));
+			logger.debug("searchitem is clicked");
+		}
+		
+		
+	
+	@FindBy(xpath="//div[contains(@class,'suggestion-lists')]") WebElement listsuggestion;
+	
+	public boolean verifySuggestionPage(String inputSearchTxt) throws Exception{
+		boolean flag = false;
+		if("mobile".equalsIgnoreCase(testtype)){Actions actions = new Actions(driver);
+		actions.moveToElement(txtSearchBox_mobile);
+		actions.click();
+		actions.sendKeys(inputSearchTxt);
+		actions.build().perform();
+		Thread.sleep(10000);
+		waitForElement(listsuggestion);
+		Actions search = new Actions(driver);
+		search.moveToElement(listsuggestion);
+		search.build().perform();
+		String searchResultTxt = listsuggestion.getText();
+		System.out.println("&&&&&&&&&&&&&&&&&&&*****************************ss:: "+searchResultTxt);
+		String searchTxtArray[]=searchResultTxt.split("\\r?\\n");
+		for(String txt: searchTxtArray){
+			if(txt != null && !(txt.contains("CATEGORY")||txt.contains("BRAND")||txt.contains("Clear")) && txt.contains(inputSearchTxt)){
+				flag = true;
+			}
+		}
+		System.out.println("verifySuggestionPage Flag::"+flag);
+		}else {
+								
+			Actions actions = new Actions(driver);
+			actions.moveToElement(txtSearchBox);
+			actions.click();
+			actions.sendKeys(inputSearchTxt);
+			actions.build().perform();
+			Thread.sleep(10000);
+			waitForElement(listsuggestion);
+			Actions search = new Actions(driver);
+			search.moveToElement(listsuggestion);
+			search.build().perform();
+			String searchResultTxt = listsuggestion.getText();
+			System.out.println("&&&&&&&&&&&&&&&&&&&*****************************ss:: "+searchResultTxt);
+			String searchTxtArray[]=searchResultTxt.split("\\r?\\n");
+			for(String txt: searchTxtArray){
+				if(txt != null && !(txt.contains("CATEGORY")||txt.contains("BRAND")||txt.contains("Clear")) && txt.contains(inputSearchTxt)){
+					flag = true;
+				}
+			}
+			System.out.println("verifySuggestionPage Flag::"+flag);
+		}
+		return flag;	
+	}
+	
+	
+	
+	
+	public boolean verifyDuplicateSuggestion(String inputSearchTxt) throws Exception{
+		boolean flag = false;
+		if("mobile".equalsIgnoreCase(testtype)){
+			HashMap<String, String> seachMap = new HashMap<String, String>();
+			Actions actions = new Actions(driver);
+			actions.moveToElement(txtSearchBox_mobile);
+			actions.click();
+			actions.sendKeys(inputSearchTxt);
+			actions.build().perform();
+			Thread.sleep(10000);
+			waitForElement(listsuggestion);
+			Actions search = new Actions(driver);
+			search.moveToElement(listsuggestion);
+			search.build().perform();
+			waitForElement(listsuggestion);
+			Thread.sleep(10000);
+			String searchResultTxt = listsuggestion.getText();
+			
+			logger.debug("&&&&&&&&&&&&&&&&&&&**************************ss:: "+searchResultTxt);
+			//System.out.println("&&&&&&&&&&&&&&&&&&&*****************************ss:: "+searchResultTxt);
+			String searchTxtArray[]=searchResultTxt.split("\\r?\\n");
+			for(String txt: searchTxtArray){
+				if(txt != null ){
+					if(seachMap.containsKey(txt)) {
+						flag = false;
+						break;
+					}else {
+						seachMap.put(txt, txt);
+						flag = true;
+					}
+					
+				}
+			}
+			System.out.println("verifyDuplicateSuggestion Flag::"+flag);
+		}else {
+				
+			HashMap<String, String> seachMap = new HashMap<String, String>();
+			Actions actions = new Actions(driver);
+			actions.moveToElement(txtSearchBox);
+			actions.click();
+			actions.sendKeys(inputSearchTxt);
+			actions.build().perform();
+			Thread.sleep(10000);
+			waitForElement(listsuggestion);
+			Actions search = new Actions(driver);
+			search.moveToElement(listsuggestion);
+			search.build().perform();
+			waitForElement(listsuggestion);
+			Thread.sleep(10000);
+			String searchResultTxt = listsuggestion.getText();
+			
+			logger.debug("&&&&&&&&&&&&&&&&&&&**************************ss:: "+searchResultTxt);
+			//System.out.println("&&&&&&&&&&&&&&&&&&&*****************************ss:: "+searchResultTxt);
+			String searchTxtArray[]=searchResultTxt.split("\\r?\\n");
+			for(String txt: searchTxtArray){
+				if(txt != null ){
+					if(seachMap.containsKey(txt)) {
+						flag = false;
+						break;
+					}else {
+						seachMap.put(txt, txt);
+						flag = true;
+					}
+					
+				}
+			}
+			System.out.println("verifyDuplicateSuggestion Flag::"+flag);
+		}
+		return flag;	
+	}
+	public void verifyTheCLPPage() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			assertTrue(isDisplayed(categorydescription));
+			logger.debug("categorydescription is displayed");
+		}else {
+			
+			assertTrue(isDisplayed(categorydescription));
+			logger.debug("categorydescription is displayed");
+		}
+		
+	}
+	public void verifyTheNullPage() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			assertTrue(isDisplayed(nulldescription));
+			logger.debug("Description is displayed");
+		}else {
+			
+			assertTrue(isDisplayed(nulldescription));
+			logger.debug("Description is displayed");
+		}
+		
+	}public void verifyTheColorPage() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			assertTrue(isDisplayed(nulldescription));
+			logger.debug("Description is displayed");
+		}else {
+			
+			assertTrue(isDisplayed(nulldescription));
+			logger.debug("Description is displayed");
+		}
+		
+	}
+	public void validatingAddtoCartIcon() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(iconcart);
+			logger.debug("iconcart is not displayed");
+		}else {
+			isDisplayed(iconcart);
+			logger.debug("iconcart is displayed");
+		}}
+		
+		public void clickexpandall_academy() throws Exception{
+			assertTrue(clickOnButton(expandall_Academy_academy));
+	
+
+	}
+		public void validatingOurhistory() throws Exception{
+			
+			if("mobile".equalsIgnoreCase(testtype)){
+				isDisplayed(lnkourhistory);
+				assertTrue(isClickable(lnkourhistory));
+				logger.debug("our history link is not displayed");
+			}else {
+				isDisplayed(lnkourhistory);
+				assertTrue(isClickable(lnkourhistory));
+				logger.debug("our history link is displayed");
+			}
+			
+	}
+		public void validatingCareers() throws Exception{
+			if("mobile".equalsIgnoreCase(testtype)){
+				isDisplayed(lnkcareers);
+				assertTrue(isClickable(lnkcareers));
+				logger.debug("our history link is not displayed");
+			}else {
+				isDisplayed(lnkcareers);
+				assertTrue(isClickable(lnkcareers));
+				logger.debug("our history link is displayed++++++++++++++++++++++++==");
+			}
+		
+
+	}
+		
+		public void validatingPressRoom() throws Exception{
+			if("mobile".equalsIgnoreCase(testtype)){
+				isDisplayed(lnkpressroom);
+				assertTrue(isClickable(lnkpressroom));
+				logger.debug("pressroom is not displayed");
+			}else {
+				isDisplayed(lnkpressroom);
+				assertTrue(isClickable(lnkpressroom));
+				logger.debug("press room  link is displayed");
+			}
+		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
+
+	}
+		public void validatingGivingBack() throws Exception{
+			if("mobile".equalsIgnoreCase(testtype)){
+				isDisplayed(lnkgivingback);
+				assertTrue(isClickable(lnkgivingback));
+				logger.debug("our history link is not displayed");
+			}else {
+				isDisplayed(lnkgivingback);
+				isClickable(lnkgivingback);
+				logger.debug("our history link is displayed++++++++++++++++++++++++==");
+			}
+		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
+
+	}
+		public void validatingCheckOrder() throws Exception{
+			if("mobile".equalsIgnoreCase(testtype)){
+				isDisplayed(lnkcheckorder);
+				assertTrue(isClickable(lnkcheckorder));
+				logger.debug("CheckOrder link is not displayed");
+			}else {
+				isDisplayed(lnkcheckorder);
+				isClickable(lnkcheckorder);
+				logger.debug("CheckOrder link is displayed++++++++++++++++++++++++==");
+			}
+		}
+			public void validatingReturnPolicy() throws Exception{
+				if("mobile".equalsIgnoreCase(testtype)){
+					isDisplayed(lnkreturnpolicy);
+					assertTrue(isClickable(lnkreturnpolicy));
+					logger.debug("CheckOrder link is not displayed");
+				}else {
+					isDisplayed(lnkreturnpolicy);
+					isClickable(lnkreturnpolicy);
+					logger.debug("CheckOrder link is displayed++++++++++++++++++++++++==");
+				}
+		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
+
+	}
+			
+			public void validatingProductRecall() throws Exception{
+				if("mobile".equalsIgnoreCase(testtype)){
+					isDisplayed(lnkproductrecall);
+					assertTrue(isClickable(lnkproductrecall));
+					logger.debug("lnkproductrecall link is not displayed");
+				}else {
+					isDisplayed(lnkproductrecall);
+					isClickable(lnkproductrecall);
+					logger.debug("lnkproductrecall link is displayed++++++++++++++++++++++++==");
+				}
+		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
+
+	}
+			public void validatingRebates() throws Exception{
+				if("mobile".equalsIgnoreCase(testtype)){
+					isDisplayed(lnkrebates);
+					assertTrue(isClickable(lnkrebates));
+					logger.debug("lnkproductrecall link is not displayed");
+				}else {
+					isDisplayed(lnkrebates);
+					isClickable(lnkrebates);
+					logger.debug("lnkproductrecall link is displayed++++++++++++++++++++++++==");
+				}
+		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
+
+	}
+			public void validatingContactUs() throws Exception{
+				if("mobile".equalsIgnoreCase(testtype)){
+					isDisplayed(lnkcontactus);
+					assertTrue(isClickable(lnkcontactus));
+					logger.debug("lnkproductrecall link is not displayed");
+				}else {
+					isDisplayed(lnkcontactus);
+					isClickable(lnkcontactus);
+					logger.debug("lnkproductrecall link is displayed++++++++++++++++++++++++==");
+				}
+		
+
+	}
+			public void validatingCustomercare() throws Exception{
+				if("mobile".equalsIgnoreCase(testtype)){
+					isDisplayed(lnkcustomercare);
+					assertTrue(isClickable(lnkcustomercare));
+					logger.debug("lnkcustomercare link is not displayed");
+				}else {
+					isDisplayed(lnkcustomercare);
+					isClickable(lnkcustomercare);
+					logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
+				}
+		
+
+	}
+			
+			public void validatingGiftcards() throws Exception{
+				if("mobile".equalsIgnoreCase(testtype)){
+					isDisplayed(lnkgiftcards);
+					assertTrue(isClickable(lnkgiftcards));
+					logger.debug("lnkcustomercare link is not displayed");
+				}else {
+					isDisplayed(lnkgiftcards);
+					isClickable(lnkgiftcards);
+					logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
+				}
+		
+
+	}
+			
+			public void validatingAcademyCreditCard() throws Exception{
+				if("mobile".equalsIgnoreCase(testtype)){
+					isDisplayed(lnkAcademyCreditCards);
+					assertTrue(isClickable(lnkAcademyCreditCards));
+					logger.debug("lnkcustomercare link is not displayed");
+				}else {
+					isDisplayed(lnkAcademyCreditCards);
+					isClickable(lnkAcademyCreditCards);
+					logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
+				}
+		
+
+	}
+			public void validatingStoreServices() throws Exception{
+				if("mobile".equalsIgnoreCase(testtype)){
+					isDisplayed(lnkStoreServices);
+					assertTrue(isClickable(lnkStoreServices));
+					logger.debug("lnkcustomercare link is not displayed");
+				}else {
+					isDisplayed(lnkStoreServices);
+					isClickable(lnkStoreServices);
+					logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
+				}
+		
+
+	}
+			
+			public void validatingFindaStore() throws Exception{
+				if("mobile".equalsIgnoreCase(testtype)){
+					isDisplayed(lnkfindastore);
+					assertTrue(isClickable(lnkfindastore));
+					logger.debug("lnkcustomercare link is not displayed");
+				}else {
+					isDisplayed(lnkfindastore);
+					isClickable(lnkfindastore);
+					logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
+				}
+		
+
+	}
+			
+			public void validatingsignupformoredeals() throws Exception{
+				if("mobile".equalsIgnoreCase(testtype)){
+					isDisplayed(lnkSIGNUPFORMOREDEALS);
+					assertTrue(isClickable(lnkSIGNUPFORMOREDEALS));
+					logger.debug("lnkcustomercare link is not displayed");
+				}else {
+					isDisplayed(lnkSIGNUPFORMOREDEALS);
+					isClickable(lnkSIGNUPFORMOREDEALS);
+					logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
+				}
+		
+
+	}
+			
+			public void validatingchatnow() throws Exception{
+				if("mobile".equalsIgnoreCase(testtype)){
+					isDisplayed(lnkchatnow);
+					assertTrue(isClickable(lnkchatnow));
+					logger.debug("lnkcustomercare link is not displayed");
+				}else {
+					isDisplayed(lnkchatnow);
+					isClickable(lnkchatnow);
+					logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
+				}
+		
+
+	}
+	public void validatingShopCategory() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(btnShopCategory);
+			logger.debug("shop is not displayed");
+		}else {
+			isDisplayed(btnShopCategory);
+			logger.debug("shop is displayed");
+		}
+		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
+
+	}
+	public void validatingTrendingCategory() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(btnTRENDINGBurgerMenu);
+			logger.debug("trending is not displayed");
+		}else {
+			isDisplayed(btnTRENDING);
+			logger.debug("trending is displayed");
+		}
+		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
+
+	}
+	
+	public void validatingDealsCategory() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(btnDEALSBurgerMenu);
+			logger.debug("deals is not displayed");
+		}else {
+			isDisplayed(btnDEALS);
+			logger.debug("deals is displayed");
+		}
+		//	Assert.assertEquals("Validating the presence for txtSearch Box Open");//Framework Method need to be used
+
+	}
+	public void validatingShopByDepartmentSlide_BurgerMenu() throws Exception{
+
+		//	Assert.assertEquals("Validating the presence for available Categories ");//Framework Method need to be used
+		//	Assert.assertEquals("Validating the presence for MyAccount ");//Framework Method need to be used
+		//	Assert.assertEquals("Validating the presence for SignIn");//Framework Method need to be used
+	}
+
+	public void validitingClickingOnSearchLens() throws Exception{
+		clickOnButton(btnSearchLens);
+		//	Assert.assertEquals("Validating the presence for serach text box should display ");//Framework Method need to be used
+
+	}
+
+	public void findAndClickStoreinGH() throws Exception{
+
+		if(isDisplayed(txtFindAStore)) {
+
+			assertTrue(clickOnButton(txtFindAStore));
+		}else
+			logger.debug("Find A store link is not displayed ");	
+
+	}
+
+
+	public void validateStoreNameExist(String expectedStoreName) throws Exception{
+		String actualStoreName = getText(txtFindAStore);
+
+		if(actualStoreName.equals(expectedStoreName))
+			logger.debug("User is selected the store succesfully");	
+		else
+			logger.debug("User is NOT selected the store succesfully");	
+
+
+	}
+
+
+	public void validateWeeklyAdLinkPresence() throws InterruptedException {
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(txtWeeklyADBurgerMenu);
+		}else {
+			isDisplayed(txtWeeklyAD);
+		}
+	}
+
+
+	public void validatingPresenceOfTextSearchBox() {
+		
+		if(isDisplayed(txtSearchBox_mobile)) {
+			System.out.println("Search Icon is displayed");
+	    	logger.debug("Search Icon is displayed");	
+		
+	    //	assertTrue(clickOnButton(btnSearchLens));
+		    
+	    	if(isDisplayed(txtSearchBox_mobile)) {
+	    		System.out.println("Fluid Search text bar is displayed");
+		              	logger.debug("Fluid Search text bar is displayed");	
+	    	}    else 
+		               logger.debug("Fluid Search text bar is NOT displayed");	
+		}
+		
+	}
+
+
+	public void validatePreseneceOfFindStore() {
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(btnFindAStoreBurgerMenu);
+			logger.debug("Find A Store link is displayed in Mobile BurgerMenu");
+		}else {
+			isDisplayed(btnFindAStore);
+			logger.debug("Find A Store link is displayed");
+		}
+		/*if(isDisplayed(btnFindAStoreBurgerMenu))
+			logger.debug("Find A Store link is displayed in Mobile BurgerMenu");	
+		else
+			logger.debug("Find A Store link is NOT displayed in Mobile BurgerMenu");	*/
+	}
+
+
+	public void validatePresenceOfNavigationCategories() {
+		if(isDisplayed(btnDEALSBurgerMenu)&&isDisplayed(btnSHOPBurgerMenu)&&isDisplayed(btnTRENDINGBurgerMenu))
+		logger.debug("Category links for navigation are displayed");	
+		else
+			logger.debug("Category links for navigation are NOT displayed");	
+	}
+
+
+	public void validatePresenceOfMyAccountLink() {
+		
+		if(isDisplayed(btnMyAccountBurgerMenu))
+			logger.debug("My Account link is displayed in Mobile BurgerMenu");	
+		else
+			logger.debug("My Account link is NOT displayed in Mobile BurgerMenu");	
+		
+	}
+	public void validatingPrivatPolicy() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(lnkprivatepolicy);
+			assertTrue(isClickable(lnkprivatepolicy));
+			logger.debug("lnkcustomercare link is not displayed");
+		}else {
+			isDisplayed(lnkprivatepolicy);
+			isClickable(lnkprivatepolicy);
+			logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
+		}
+
+
+}
+	public void validatingTermsAndConditions() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(lnktermsandconditions);
+			assertTrue(isClickable(lnktermsandconditions));
+			logger.debug("lnkcustomercare link is not displayed");
+		}else {
+			isDisplayed(lnktermsandconditions);
+			isClickable(lnktermsandconditions);
+			logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
+		}
+
+
+}
+	public void validatingLegalPolicy() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			isDisplayed(lnklegalpolicy);
+			assertTrue(isClickable(lnklegalpolicy));
+			logger.debug("lnkcustomercare link is not displayed");
+		}else {
+			isDisplayed(lnklegalpolicy);
+			isClickable(lnklegalpolicy);
+			logger.debug("lnkcustomercare link is displayed++++++++++++++++++++++++==");
+		}
+
+
+}
+	
+	//Anuj changes on 26/06/2018 KER-721 
+	public void validatingPresenceOfTextSearchBoxHomePage() {
+
+		if(isDisplayed(btnSearchLens)) {
+			System.out.println("Search Icon is displayed");
+			logger.debug("Search Icon is displayed");
+
+			if(isDisplayed(ovlySearchTextBarMobile)) {
+				logger.debug("Fluid Search text bar is displayed");	
+			}    else 
+				logger.debug("Fluid Search text bar is NOT displayed");	
+		}
+
+	}
+//Rashika's changes for 720 footer 
+	public void clickexpandall_services() throws Exception{
+		assertTrue(clickOnButton(expandall_Academy_services));
+	}
+	public void clickexpandall_needhelp() throws Exception{
+		assertTrue(clickOnButton(expandall_Academy_needhelp));
+	}
+	
+//KER-3274	
+	public void verifyTheLabelForSearch() throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			assertTrue(isDisplayed(labelforsearch));
+			logger.debug("label is displayed");
+			
+		}else {
+			
+			assertTrue(isDisplayed(labelforsearch));
+			logger.debug("label is displayed");
+		}
+		
+	}
+	
+	public void verifySuggestionPage_Productcard(String inputSearchTxt) throws Exception{
+		Actions actions = new Actions(driver);
+		actions.moveToElement(txtSearchBox);
+		actions.click();
+		actions.sendKeys(Keys.BACK_SPACE);
+		actions.sendKeys(Keys.BACK_SPACE);
+		actions.sendKeys(inputSearchTxt);
+		actions.build().perform();
+		Thread.sleep(10000);
+		assertTrue(isDisplayed(listsuggestion_productcard));
+		assertTrue(clickOnButton(listsuggestion_productcard));
+	
+	}
+	
+	public void entertheSearchData(String str) throws Exception{
+		if("mobile".equalsIgnoreCase(testtype)){
+			Actions actions = new Actions(driver);
+			actions.moveToElement(txtSearchBox_mobile);
+			actions.click();
+			actions.sendKeys(str);
+			actions.build().perform();
+		}else {
+			
+			Actions actions = new Actions(driver);
+			actions.moveToElement(txtSearchBox);
+			actions.click();
+			actions.sendKeys(str);
+			actions.build().perform();
+			
+		}
+	
+	}
+
+	//Rashmi Sanity changes
+	public void verifypresenceofL1Page() throws Exception {
+		if("mobile".equalsIgnoreCase(testtype)){
+			assertTrue(isDisplayed(ContainerL1));
+		 	logger.debug("L1 Page is not displayed");
+		}else {
+			assertTrue(isDisplayed(ContainerL1));
+			logger.debug("L1 Page is not displayed");
+		}
+	}
+	
+	
+	public void verifypresenceofL2Page() throws Exception {
+		if("mobile".equalsIgnoreCase(testtype)){
+			assertTrue(isDisplayed(ContainerL2));
+		 	logger.debug("L2 Page is not displayed");
+		}else {
+			assertTrue(isDisplayed(ContainerL2));
+			logger.debug("L2 Page is not displayed");
+		}
+	}
+	
+	public void verifypresenceofL3Page() throws Exception {
+		if("mobile".equalsIgnoreCase(testtype)){
+			assertTrue(isDisplayed(ContainerL3));
+		 	logger.debug("L3 Page is not displayed");
+		}else {
+			assertTrue(isDisplayed(ContainerL3));
+			logger.debug("L3 Page is not displayed");
+		}
+	}
+	
+	public void navigateToL2ViaClick_DesktopHomepage() throws Exception{
+		
+		assertTrue(clickOnButton(btnShopCategory));
+		Actions hover = new Actions(getDriver());
+		hover.moveToElement(btnClothingCategory).build().perform();
+		assertTrue(clickOnButton(lnkMens_HomePage));
+	}	
+	
+	
+    public void navigateToL3ViaClick_DesktopHomepage() throws Exception{
+		
+		assertTrue(clickOnButton(btnShopCategory));
+		Actions hover = new Actions(getDriver());
+		hover.moveToElement(btnClothingCategory).build().perform();
+		assertTrue(clickOnButton(lnkshirts_HomePage));
+	}	
+
+public void enterthePDPSearchData() throws Exception{
+	    txtSearchBox.sendKeys("Nike Women's Nike Cheer Scorpion Cheerleading Shoes");
+	 	assertTrue(clickOnButton(btnSearch_Desktop));
+}
+
+
+public void entertheSearchDataForResultsPage() throws Exception{
+    txtSearchBox.sendKeys("Pants");
+ 	assertTrue(clickOnButton(btnSearch_Desktop));
+}	
+
+
+public void verifypresenceofSearchResultsPage() throws Exception {
+	if("mobile".equalsIgnoreCase(testtype)){
+		assertTrue(isDisplayed(txtSearchPage));
+	 	logger.debug("Search Page is not displayed");
+	}else {
+		assertTrue(isDisplayed(txtSearchPage));
+	    logger.debug("Search Page is not displayed");
+	}
+}
+
+
+public void verifypresenceofPDPPage() throws Exception {
+	if("mobile".equalsIgnoreCase(testtype)){
+		assertTrue(isDisplayed(btnAddToCart));
+	 	logger.debug("PDP Page is not displayed");
+	}else {
+		assertTrue(isDisplayed(btnAddToCart));
+	    logger.debug("PDP Page is not displayed");
+	}
+}
+
+public void verifypresenceofPDPComponents() throws Exception {
+	if("mobile".equalsIgnoreCase(testtype)){
+		assertTrue(isDisplayed(btnAddToCart));
+		assertTrue(isDisplayed(btnAddToCart));
+	 	logger.debug("PDP Page is not displayed");
+	}else {
+		assertTrue(isDisplayed(btnAddToCart));
+	    logger.debug("PDP Page is not displayed");
+	}
+}
+
+public void verifypresenceofSearchResultsage() throws Exception {
+	if("mobile".equalsIgnoreCase(testtype)){
+		assertTrue(isDisplayed(txtSearchResults));
+	 	logger.debug("Search Results Page is not displayed");
+	}else {
+		assertTrue(isDisplayed(txtSearchResults));
+	    logger.debug("Search Results Page is not displayed");
+	}
+}
+
+
+}

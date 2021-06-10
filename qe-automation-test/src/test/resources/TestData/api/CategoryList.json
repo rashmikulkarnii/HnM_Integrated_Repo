@@ -1,0 +1,34 @@
+[
+	{
+		"price": "$19",
+		"imageURL": "https://assets.academy.com/mgen/35/10740335.jpg",
+		"name": "Carhartt Men's Force Cotton Short Sleeve T-shirt",
+		"partNumber": "201354278",
+		"shortDescription": "The Carhartt Men's Force™ Cotton Short Sleeve T-shirt features sweat-wicking technology and raglan-style sleeves.",
+		"uniqueID": "667332"
+	},
+	{
+		"price": "$17",
+		"imageURL": "https://assets.academy.com/mgen/79/10762879.jpg",
+		"name": "Brazos Men's Blacksmith Hooded Flannel Shirt Jacket",
+		"partNumber": "103918480",
+		"shortDescription": "The Brazos™ Men's Blacksmith Hooded Flannel Shirt Jacket is made of cotton and features a quilted nylon lining.",
+		"uniqueID": "3027441"
+	},
+	{
+		"price": "$22",
+		"imageURL": "https://assets.academy.com/mgen/77/10568677.jpg",
+		"name": "Guy Harvey Men's Black Magic Short Sleeve T-shirt",
+		"partNumber": "112481030",
+		"shortDescription": "The Guy Harvey Men's Black Magic Short Sleeve T-shirt features cotton construction and a patriotic, screen-printed graphic on the back.",
+		"uniqueID": "4718527"
+	},
+	{
+		"price": "$18",
+		"imageURL": "https://assets.academy.com/mgen/49/10691449.jpg",
+		"name": "BCG Men's Short Sleeve Turbo T-shirt",
+		"partNumber": "200687421",
+		"shortDescription": "The BCG™ Men's Short Sleeve Turbo T-shirt is made of 94% polyester and 6% spandex and features moisture-wicking fabric technology.",
+		"uniqueID": "101335"
+	}
+]

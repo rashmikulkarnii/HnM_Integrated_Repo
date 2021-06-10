@@ -1,0 +1,120 @@
+package com.aso.qe.test.stepdefinition.web;
+
+import static org.testng.Assert.assertTrue;
+
+import org.openqa.selenium.support.PageFactory;
+
+import com.HnM.qe.framework.common.CommonActionHelper;
+import com.HnM.qe.test.pageobject.GlobalElementHeader_HomePO;
+import com.HnM.qe.test.pageobject.HomePagePOM;
+import com.HnM.qe.test.pageobject.SearchProductPO;
+
+import cucumber.api.java.en.And;
+import cucumber.api.java.en.Then;
+
+public class R1SP1_KER_2339_Web_SD extends CommonActionHelper{
+	//private static final Logger logger = Logger.getLogger(R1SP1_KER_728_Web_SD.class);
+	 
+	GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
+	//public ShoppingCartViewPO shoppingCartViewPO =  PageFactory.initElements(driver, ShoppingCartViewPO.class);
+	public HomePagePOM homepagePOM=PageFactory.initElements(driver, HomePagePOM.class);
+	public SearchProductPO searchProductPO =  PageFactory.initElements(driver, SearchProductPO.class);
+	
+	
+	@And("^User navigates to PDP page$")
+	public void user_navigates_to_PDP_page() throws Throwable {
+	   assertTrue(clickOnButton(homepagePOM.menuClothing));
+	   assertTrue(clickOnButton(homepagePOM.submenu));
+	   assertTrue(clickOnButton(searchProductPO.img_men_pant));
+	   
+	   
+	}
+	@Then("^User click on the product image$")
+	public void user_click_on_the_productimage() throws Throwable {
+		assertTrue(clickOnButton(globalElementHeader.imgMensShortShirt));
+		
+	}
+	
+	
+	@Then("^User click on the breadcrumb last link$")
+	public void user_click_on_the_breadcrumb_last_link() throws Throwable {
+		
+		assertTrue(clickOnButton(globalElementHeader.lnkMensShirts));
+				
+		
+	}
+	@Then("^User click on the breadcrumb last second link$")
+	public void user_click_on_the_breadcrumb_last_second_link() throws Throwable {
+		
+		
+				
+		assertTrue(clickOnButton(globalElementHeader.lnkMensClothing));
+	}
+	
+	@Then("^User click on the breadcrumb link for mobile$")
+	public void user_click_on_the_breadcrumb_link_for_mobile() throws Throwable {
+		
+		//assertTrue(clickOnButton(globalElementHeader.lnkMensShirts));
+				
+		assertTrue(clickOnButton(globalElementHeader.lnkMensClothing));
+	}
+	@Then("^User verify the last breadcrumb in the series should not be an active link$")
+	public void user_verify_the_last_breadcrumb_in_the_series_should_not_be_an_active_link() throws Throwable {
+		
+		assertTrue(isDisplayed(globalElementHeader.txtproductselected));
+		
+				
+		
+	}
+	@Then("^User verify the last breadcrumb in the series should not be an active link for last link$")
+	public void user_verify_the_last_breadcrumb_in_the_series_should_not_be_an_active_link_for_last_link() throws Throwable {
+		
+		assertTrue(isDisplayed(globalElementHeader.lnkMensShirtsnotclickable));
+		
+				
+		
+	}
+	@Then("^User verify the last breadcrumb in the series should not be an active link for second link$")
+	public void user_verify_the_last_breadcrumb_in_the_series_should_not_be_an_active_link_for_second_link() throws Throwable {
+		
+		assertTrue(isDisplayed(globalElementHeader.lnkMensClothingnotclickable));
+		
+	}
+	@And("^User verify that the last breadcrumb in PLP will not be an active link$")
+	public void user_verify_that_the_last_breadcrumb_in_PLP_will_not_be_an_active_link() throws Throwable {
+		
+		assertTrue(isDisplayed(globalElementHeader.titleMensShirtclothing));
+		
+				
+		
+	}
+	@And("^User verify that the last breadcrumb in category will not be an active link$")
+	public void user_verify_that_the_last_breadcrumb_in_category_will_not_be_an_active_link() throws Throwable {
+		
+		assertTrue(isDisplayed(globalElementHeader.titleclothing));
+		
+				
+		
+	}
+	
+	@And("^User verify that the last breadcrumb in sub category will not be an active link$")
+	public void user_verify_that_the_last_breadcrumb_in_sub_category_will_not_be_an_active_link() throws Throwable {
+		
+		assertTrue(isDisplayed(globalElementHeader.titleMensclothing));
+		
+				
+		
+	}
+	@Then("^User click on the clothing category$")
+	public void user_click_on_the_clothing_category() throws Throwable {
+		assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
+		
+	}
+	
+	
+	@Then("^User verifies that the clothing category should not be active link$")
+	public void user_verifies_that_the_clothing_category_should_not_be_active_link() throws Throwable {
+		assertTrue(clickOnButton(globalElementHeader.btnClothingCategory));
+		
+	}
+}

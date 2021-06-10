@@ -1,0 +1,45 @@
+# Common Environment properties
+HnM_Home=https://www2.hm.com/en_in/index.html
+
+
+#QA BOX:: http://35.202.244.154/shop/browse/apparel/mens-apparel/mens-accessories
+#DEV BOX:: http://35.202.235.124/shop/browse/shooting/ammunition
+
+#https://www.academy.com/
+CaptureScreenShot=Yes
+CaptureOnlyFAIL=No
+#isLocalENV value yes/no
+isLocalENV=Yes
+#AppType values web android ios
+browserType=chrome
+AppType=web
+deviceName=iphone6
+
+#explicit wait Timeout in Seconds
+WEBDRIVER_EXPLICIT_WAITTIME_SECONDS=55
+WEBDRIVER_IMPLICIT_WAITTIME_SECONDS=20
+PAGELOAD_WAITTIME_SECONDS=120
+
+
+# API Properties
+api.uat6int.baseURL=https://uat6www.academy.com
+api.baseURL=http://104.198.177.89
+#api.baseURL=http://35.202.244.154
+
+
+
+
+#Android Mobile DesiredCapabilities and others Properties
+a.platformName=Android
+a.platformVersion=7.0.1
+a.deviceName=emulator-5554
+a.clearSystemFiles=true
+a.chromedriverExecutable=chromedriver-55.exe
+browser=firefox
+#a.avd=
+#fullReset=
+#noReset=
+#autoWebview=
+#automationName=
+
+

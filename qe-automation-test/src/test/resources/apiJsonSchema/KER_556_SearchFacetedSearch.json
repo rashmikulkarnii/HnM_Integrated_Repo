@@ -1,0 +1,1245 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "recordSetTotal": {
+      "type": "string"
+    },
+    "recordSetCount": {
+      "type": "string"
+    },
+    "sortByInfo": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "selectedProperty": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "selectedProperty"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "selectedProperty": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "selectedProperty"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "selectedProperty": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "selectedProperty"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "selectedProperty": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "selectedProperty"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "selectedProperty": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "selectedProperty"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "selectedProperty": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "selectedProperty"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "selectedProperty": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "selectedProperty"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "selectedProperty": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "selectedProperty"
+          ]
+        }
+      ]
+    },
+    "productinfo": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "shortDescription": {
+              "type": "string"
+            },
+            "sellable": {
+              "type": "string"
+            },
+            "colorCount": {
+              "type": "string"
+            },
+            "colorImages": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "skuCount": {
+              "type": "string"
+            },
+            "bvRating": {
+              "type": "string"
+            },
+            "manufacturer": {
+              "type": "string"
+            },
+            "defaultSku": {
+              "type": "string"
+            },
+            "isSingleSkuProduct": {
+              "type": "boolean"
+            },
+            "partNumber": {
+              "type": "string"
+            },
+            "seoURL": {
+              "type": "string"
+            },
+            "imageURL": {
+              "type": "string"
+            },
+            "imageAltDescription": {
+              "type": "string"
+            },
+            "isGiftCard": {
+              "type": "string"
+            },
+            "defaultSkuPrice": {
+              "type": "object",
+              "properties": {
+                "salePrice": {
+                  "type": "string"
+                },
+                "priceMessage": {
+                  "type": "string"
+                },
+                "savings": {
+                  "type": "string"
+                },
+                "listPrice": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "salePrice",
+                "priceMessage",
+                "savings",
+                "listPrice"
+              ]
+            },
+            "storeId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "shortDescription",
+            "sellable",
+            "colorCount",
+            "colorImages",
+            "skuCount",
+            "bvRating",
+            "manufacturer",
+            "defaultSku",
+            "isSingleSkuProduct",
+            "partNumber",
+            "seoURL",
+            "imageURL",
+            "imageAltDescription",
+            "isGiftCard",
+            "defaultSkuPrice",
+            "storeId"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "shortDescription": {
+              "type": "string"
+            },
+            "sellable": {
+              "type": "string"
+            },
+            "colorCount": {
+              "type": "string"
+            },
+            "colorImages": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "skuCount": {
+              "type": "string"
+            },
+            "bvRating": {
+              "type": "string"
+            },
+            "manufacturer": {
+              "type": "string"
+            },
+            "defaultSku": {
+              "type": "string"
+            },
+            "isSingleSkuProduct": {
+              "type": "boolean"
+            },
+            "partNumber": {
+              "type": "string"
+            },
+            "seoURL": {
+              "type": "string"
+            },
+            "imageURL": {
+              "type": "string"
+            },
+            "imageAltDescription": {
+              "type": "string"
+            },
+            "isGiftCard": {
+              "type": "string"
+            },
+            "defaultSkuPrice": {
+              "type": "object",
+              "properties": {
+                "salePrice": {
+                  "type": "string"
+                },
+                "priceMessage": {
+                  "type": "string"
+                },
+                "savings": {
+                  "type": "string"
+                },
+                "listPrice": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "salePrice",
+                "priceMessage",
+                "savings",
+                "listPrice"
+              ]
+            },
+            "adBug": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "storeId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "shortDescription",
+            "sellable",
+            "colorCount",
+            "colorImages",
+            "skuCount",
+            "bvRating",
+            "manufacturer",
+            "defaultSku",
+            "isSingleSkuProduct",
+            "partNumber",
+            "seoURL",
+            "imageURL",
+            "imageAltDescription",
+            "isGiftCard",
+            "defaultSkuPrice",
+            "adBug",
+            "storeId"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "shortDescription": {
+              "type": "string"
+            },
+            "sellable": {
+              "type": "string"
+            },
+            "colorCount": {
+              "type": "string"
+            },
+            "colorImages": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "skuCount": {
+              "type": "string"
+            },
+            "bvRating": {
+              "type": "string"
+            },
+            "manufacturer": {
+              "type": "string"
+            },
+            "defaultSku": {
+              "type": "string"
+            },
+            "isSingleSkuProduct": {
+              "type": "boolean"
+            },
+            "partNumber": {
+              "type": "string"
+            },
+            "seoURL": {
+              "type": "string"
+            },
+            "imageURL": {
+              "type": "string"
+            },
+            "imageAltDescription": {
+              "type": "string"
+            },
+            "isGiftCard": {
+              "type": "string"
+            },
+            "defaultSkuPrice": {
+              "type": "object",
+              "properties": {
+                "salePrice": {
+                  "type": "string"
+                },
+                "priceMessage": {
+                  "type": "string"
+                },
+                "savings": {
+                  "type": "string"
+                },
+                "listPrice": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "salePrice",
+                "priceMessage",
+                "savings",
+                "listPrice"
+              ]
+            },
+            "storeId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "shortDescription",
+            "sellable",
+            "colorCount",
+            "colorImages",
+            "skuCount",
+            "bvRating",
+            "manufacturer",
+            "defaultSku",
+            "isSingleSkuProduct",
+            "partNumber",
+            "seoURL",
+            "imageURL",
+            "imageAltDescription",
+            "isGiftCard",
+            "defaultSkuPrice",
+            "storeId"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "shortDescription": {
+              "type": "string"
+            },
+            "sellable": {
+              "type": "string"
+            },
+            "colorCount": {
+              "type": "string"
+            },
+            "colorImages": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "skuCount": {
+              "type": "string"
+            },
+            "bvRating": {
+              "type": "string"
+            },
+            "manufacturer": {
+              "type": "string"
+            },
+            "defaultSku": {
+              "type": "string"
+            },
+            "isSingleSkuProduct": {
+              "type": "boolean"
+            },
+            "partNumber": {
+              "type": "string"
+            },
+            "seoURL": {
+              "type": "string"
+            },
+            "imageURL": {
+              "type": "string"
+            },
+            "imageAltDescription": {
+              "type": "string"
+            },
+            "isGiftCard": {
+              "type": "string"
+            },
+            "defaultSkuPrice": {
+              "type": "object",
+              "properties": {
+                "salePrice": {
+                  "type": "string"
+                },
+                "priceMessage": {
+                  "type": "string"
+                },
+                "savings": {
+                  "type": "string"
+                },
+                "listPrice": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "salePrice",
+                "priceMessage",
+                "savings",
+                "listPrice"
+              ]
+            },
+            "storeId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "shortDescription",
+            "sellable",
+            "colorCount",
+            "colorImages",
+            "skuCount",
+            "bvRating",
+            "manufacturer",
+            "defaultSku",
+            "isSingleSkuProduct",
+            "partNumber",
+            "seoURL",
+            "imageURL",
+            "imageAltDescription",
+            "isGiftCard",
+            "defaultSkuPrice",
+            "storeId"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "shortDescription": {
+              "type": "string"
+            },
+            "sellable": {
+              "type": "string"
+            },
+            "colorCount": {
+              "type": "string"
+            },
+            "colorImages": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "skuCount": {
+              "type": "string"
+            },
+            "bvRating": {
+              "type": "string"
+            },
+            "manufacturer": {
+              "type": "string"
+            },
+            "defaultSku": {
+              "type": "string"
+            },
+            "isSingleSkuProduct": {
+              "type": "boolean"
+            },
+            "partNumber": {
+              "type": "string"
+            },
+            "seoURL": {
+              "type": "string"
+            },
+            "imageURL": {
+              "type": "string"
+            },
+            "imageAltDescription": {
+              "type": "string"
+            },
+            "isGiftCard": {
+              "type": "string"
+            },
+            "defaultSkuPrice": {
+              "type": "object",
+              "properties": {
+                "salePrice": {
+                  "type": "string"
+                },
+                "priceMessage": {
+                  "type": "string"
+                },
+                "savings": {
+                  "type": "string"
+                },
+                "listPrice": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "salePrice",
+                "priceMessage",
+                "savings",
+                "listPrice"
+              ]
+            },
+            "storeId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "shortDescription",
+            "sellable",
+            "colorCount",
+            "colorImages",
+            "skuCount",
+            "bvRating",
+            "manufacturer",
+            "defaultSku",
+            "isSingleSkuProduct",
+            "partNumber",
+            "seoURL",
+            "imageURL",
+            "imageAltDescription",
+            "isGiftCard",
+            "defaultSkuPrice",
+            "storeId"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "shortDescription": {
+              "type": "string"
+            },
+            "sellable": {
+              "type": "string"
+            },
+            "colorCount": {
+              "type": "string"
+            },
+            "colorImages": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "skuCount": {
+              "type": "string"
+            },
+            "bvRating": {
+              "type": "string"
+            },
+            "manufacturer": {
+              "type": "string"
+            },
+            "defaultSku": {
+              "type": "string"
+            },
+            "isSingleSkuProduct": {
+              "type": "boolean"
+            },
+            "partNumber": {
+              "type": "string"
+            },
+            "seoURL": {
+              "type": "string"
+            },
+            "imageURL": {
+              "type": "string"
+            },
+            "imageAltDescription": {
+              "type": "string"
+            },
+            "isGiftCard": {
+              "type": "string"
+            },
+            "defaultSkuPrice": {
+              "type": "object",
+              "properties": {
+                "salePrice": {
+                  "type": "string"
+                },
+                "priceMessage": {
+                  "type": "string"
+                },
+                "savings": {
+                  "type": "string"
+                },
+                "listPrice": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "salePrice",
+                "priceMessage",
+                "savings",
+                "listPrice"
+              ]
+            },
+            "storeId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "shortDescription",
+            "sellable",
+            "colorCount",
+            "colorImages",
+            "skuCount",
+            "bvRating",
+            "manufacturer",
+            "defaultSku",
+            "isSingleSkuProduct",
+            "partNumber",
+            "seoURL",
+            "imageURL",
+            "imageAltDescription",
+            "isGiftCard",
+            "defaultSkuPrice",
+            "storeId"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "shortDescription": {
+              "type": "string"
+            },
+            "sellable": {
+              "type": "string"
+            },
+            "colorCount": {
+              "type": "string"
+            },
+            "colorImages": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "skuCount": {
+              "type": "string"
+            },
+            "bvRating": {
+              "type": "string"
+            },
+            "manufacturer": {
+              "type": "string"
+            },
+            "defaultSku": {
+              "type": "string"
+            },
+            "isSingleSkuProduct": {
+              "type": "boolean"
+            },
+            "partNumber": {
+              "type": "string"
+            },
+            "seoURL": {
+              "type": "string"
+            },
+            "imageURL": {
+              "type": "string"
+            },
+            "imageAltDescription": {
+              "type": "string"
+            },
+            "isGiftCard": {
+              "type": "string"
+            },
+            "defaultSkuPrice": {
+              "type": "object",
+              "properties": {
+                "salePrice": {
+                  "type": "string"
+                },
+                "priceMessage": {
+                  "type": "string"
+                },
+                "savings": {
+                  "type": "string"
+                },
+                "listPrice": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "salePrice",
+                "priceMessage",
+                "savings",
+                "listPrice"
+              ]
+            },
+            "storeId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "shortDescription",
+            "sellable",
+            "colorCount",
+            "colorImages",
+            "skuCount",
+            "bvRating",
+            "manufacturer",
+            "defaultSku",
+            "isSingleSkuProduct",
+            "partNumber",
+            "seoURL",
+            "imageURL",
+            "imageAltDescription",
+            "isGiftCard",
+            "defaultSkuPrice",
+            "storeId"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "shortDescription": {
+              "type": "string"
+            },
+            "sellable": {
+              "type": "string"
+            },
+            "colorCount": {
+              "type": "string"
+            },
+            "colorImages": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "skuCount": {
+              "type": "string"
+            },
+            "bvRating": {
+              "type": "string"
+            },
+            "manufacturer": {
+              "type": "string"
+            },
+            "defaultSku": {
+              "type": "string"
+            },
+            "isSingleSkuProduct": {
+              "type": "boolean"
+            },
+            "partNumber": {
+              "type": "string"
+            },
+            "seoURL": {
+              "type": "string"
+            },
+            "imageURL": {
+              "type": "string"
+            },
+            "imageAltDescription": {
+              "type": "string"
+            },
+            "isGiftCard": {
+              "type": "string"
+            },
+            "defaultSkuPrice": {
+              "type": "object",
+              "properties": {
+                "salePrice": {
+                  "type": "string"
+                },
+                "priceMessage": {
+                  "type": "string"
+                },
+                "savings": {
+                  "type": "string"
+                },
+                "listPrice": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "salePrice",
+                "priceMessage",
+                "savings",
+                "listPrice"
+              ]
+            },
+            "storeId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "shortDescription",
+            "sellable",
+            "colorCount",
+            "colorImages",
+            "skuCount",
+            "bvRating",
+            "manufacturer",
+            "defaultSku",
+            "isSingleSkuProduct",
+            "partNumber",
+            "seoURL",
+            "imageURL",
+            "imageAltDescription",
+            "isGiftCard",
+            "defaultSkuPrice",
+            "storeId"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "id": {
+              "type": "string"
+            },
+            "shortDescription": {
+              "type": "string"
+            },
+            "sellable": {
+              "type": "string"
+            },
+            "colorCount": {
+              "type": "string"
+            },
+            "colorImages": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "skuCount": {
+              "type": "string"
+            },
+            "bvRating": {
+              "type": "string"
+            },
+            "manufacturer": {
+              "type": "string"
+            },
+            "defaultSku": {
+              "type": "string"
+            },
+            "isSingleSkuProduct": {
+              "type": "boolean"
+            },
+            "partNumber": {
+              "type": "string"
+            },
+            "seoURL": {
+              "type": "string"
+            },
+            "imageURL": {
+              "type": "string"
+            },
+            "imageAltDescription": {
+              "type": "string"
+            },
+            "isGiftCard": {
+              "type": "string"
+            },
+            "defaultSkuPrice": {
+              "type": "object",
+              "properties": {
+                "salePrice": {
+                  "type": "string"
+                },
+                "priceMessage": {
+                  "type": "string"
+                },
+                "savings": {
+                  "type": "string"
+                },
+                "listPrice": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "salePrice",
+                "priceMessage",
+                "savings",
+                "listPrice"
+              ]
+            },
+            "storeId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "id",
+            "shortDescription",
+            "sellable",
+            "colorCount",
+            "colorImages",
+            "skuCount",
+            "bvRating",
+            "manufacturer",
+            "defaultSku",
+            "isSingleSkuProduct",
+            "partNumber",
+            "seoURL",
+            "imageURL",
+            "imageAltDescription",
+            "isGiftCard",
+            "defaultSkuPrice",
+            "storeId"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "recordSetTotal",
+    "recordSetCount",
+    "sortByInfo",
+    "productinfo"
+  ]
+}

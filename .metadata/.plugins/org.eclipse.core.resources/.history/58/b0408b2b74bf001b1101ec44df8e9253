@@ -1,0 +1,120 @@
+package com.aso.qe.test.stepdefinition.web;
+
+import static org.testng.Assert.assertTrue;
+
+import org.openqa.selenium.support.PageFactory;
+
+import com.aso.qe.framework.common.CommonActionHelper;
+import com.aso.qe.test.pageobject.GlobalElementHeader_HomePO;
+import com.aso.qe.test.pageobject.PDP_PO;
+
+import cucumber.api.java.en.Then;
+
+public class R1SP1_KER_1920_Web_SD extends CommonActionHelper{
+	//private static final Logger logger = Logger.getLogger(R1SP1_KER_1920_Web_SD.class);
+	PDP_PO pdpPageObj = PageFactory.initElements(getDriver(), PDP_PO.class);
+	public GlobalElementHeader_HomePO globalElementHeader= PageFactory.initElements(driver, GlobalElementHeader_HomePO.class);
+
+
+
+	@Then("^user click on Add to cart button$")
+	public void user_click_on_Add_to_cart_button() throws Throwable {
+		driver.navigate().refresh();
+		driver.navigate().refresh();
+		waitForElement(pdpPageObj.btnAddToCart);
+		assertTrue(clickOnButton(pdpPageObj.btnAddToCart));
+	}
+
+	@Then("^user click on continue shopping link$")
+	public void user_click_on_continue_shopping_link() throws Throwable {
+		
+		if("mobile".equalsIgnoreCase(testtype)){
+		
+			scrollPageToWebElement(pdpPageObj.lnkconitnueshopping);
+		waitForElement(pdpPageObj.lnkconitnueshopping);
+		assertTrue(clickOnButton(pdpPageObj.lnkconitnueshopping));
+		}
+		else
+		{
+			//driver.navigate().refresh();
+			waitForElement(pdpPageObj.lnkconitnueshopping);
+			assertTrue(clickOnButton(pdpPageObj.lnkconitnueshopping));
+		}
+	
+		
+	}
+	
+	@Then("^user click on view cart button$")
+	public void user_click_on_view_cart_button() throws Throwable {
+		if("mobile".equalsIgnoreCase(testtype)){
+			scrollPageToWebElement(pdpPageObj.btnViewCart);
+			Thread.sleep(10000);
+		waitForElement(pdpPageObj.btnViewCart);
+		assertTrue(clickOnButton(pdpPageObj.btnViewCart));
+		}
+		else
+		{
+			waitForElement(pdpPageObj.btnViewCart);
+			assertTrue(clickOnButton(pdpPageObj.btnViewCart));
+		}
+	}
+
+	@Then("^user click on checkout button$")
+	public void user_click_on_checkout_button() throws Throwable {
+		if("mobile".equalsIgnoreCase(testtype)){
+			scrollPageToWebElement(pdpPageObj.btnCheckout);
+			Thread.sleep(10000);
+			waitForElement(pdpPageObj.btnCheckout);
+			assertTrue(clickOnButton(pdpPageObj.btnCheckout));
+		}else
+		{
+			waitForElement(pdpPageObj.btnCheckout);
+			assertTrue(clickOnButton(pdpPageObj.btnCheckout));
+		}
+
+	}
+	@Then("^User check for the Add to cart title$")
+	public void User_check_for_the_Add_to_cart_title() throws Throwable {
+	assertTrue(isDisplayed(pdpPageObj.addtocarttitle));
+
+	}
+	@Then("^User check for product name in popup$")
+	public void User_check_for_product_name_in_popup() throws Throwable {
+	assertTrue(isDisplayed(pdpPageObj.productname));
+
+	}
+	@Then("^User check for product price in popup$")
+	public void User_check_for_product_price_in_popup() throws Throwable {
+		waitForElement(pdpPageObj.productprice);
+	assertTrue(isDisplayed(pdpPageObj.productprice));
+
+	}
+	@Then("^User check for product image in popup$")
+	public void User_check_for_product_image_in_popup() throws Throwable {
+		waitForElement(pdpPageObj.productimage);
+	assertTrue(isDisplayed(pdpPageObj.productimage));
+
+	}@Then("^User click on close button in popup$")
+	public void User_click_on_close_in_popup() throws Throwable {
+		waitForElement(pdpPageObj.closeicon);
+	assertTrue(isDisplayed(pdpPageObj.closeicon));
+
+	}
+	@Then("^User check for the view cart title$")
+	public void User_check_for_the_view_cart_title() throws Throwable {
+		waitForElement(pdpPageObj.viewcarttitle);
+	assertTrue(isDisplayed(pdpPageObj.viewcarttitle));
+
+	}
+
+	@Then("^User check for the title of checkout$")
+	public void User_check_for_the_title_of_checkout() throws Throwable {
+		waitForElement(pdpPageObj.checkouttitle);
+	assertTrue(isDisplayed(pdpPageObj.checkouttitle));
+
+	}
+
+
+
+}
+

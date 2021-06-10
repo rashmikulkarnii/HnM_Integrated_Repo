@@ -1,0 +1,14 @@
+{
+  "skus": [
+    {
+      "id": "3621390",
+      "quantity": "1",
+      "type": "REGULAR"
+    }
+  ],
+  "giftAmout": "",
+  "inventoryCheck": true,
+  "calculationUsages": [-1],
+  "isGCItem": false,
+  "isBundle": false
+} 

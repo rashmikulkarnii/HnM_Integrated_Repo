@@ -1,0 +1,11 @@
+{  
+   "description":"Wish List",
+   "descriptionName":"Wish List",
+   "registry":"false",
+   "skus":[  
+      {  
+         "productId":"3621390",
+         "quantityRequested":"1"
+      }
+   ]
+}

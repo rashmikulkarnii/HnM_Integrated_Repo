@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="clickOnLink" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="clickOnLink"/>
+			<item value="clickOnlink"/>
+			<item value="//a[@data-auid=&apos;level2Category-CLOTHING_m&apos;]"/>
+			<item value="//div[@data-auid=&apos;swatchButton-image-0&apos;]"/>
+			<item value="//div[@data-auid=&apos;facetdrawer_drawer_Price_M&apos;]//span"/>
+			<item value="//div[@data-auid=&apos;facetdrawer_drawer_Price&apos;]//i"/>
+			<item value="https://uat6www.academy.com/?debug=aso"/>
+			<item value="selectAllUnselectFacetCheckBox"/>
+			<item value="facet_brand_CheckBox_List"/>
+			<item value="@KER-552"/>
+			<item value="logo"/>
+			<item value="imgAcademyLogo"/>
+			<item value="switch"/>
+			<item value="window"/>
+		</list>
+		<list key="replacehistory">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="284" key="DIALOG_WIDTH"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="391" key="DIALOG_HEIGHT"/>
+		<item value="783" key="DIALOG_X_ORIGIN"/>
+		<item value="144" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

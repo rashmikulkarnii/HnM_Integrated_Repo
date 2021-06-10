@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="com.aso.qe.test.pageobject.GlobalElementHeader_HomePO"/>
+<fullyQualifiedTypeName name="com.aso.qe.test.common.POMConstants"/>
+<fullyQualifiedTypeName name="com.aso.qe.test.pageobject.HomePagePOM"/>
+<fullyQualifiedTypeName name="com.aso.qe.test.pageobject.SIT_CartPageObject"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="org.apache.tools.ant.PropertyHelper"/>
+<fullyQualifiedTypeName name="com.aso.qe.framework.common.PropertiesHelper"/>
+<fullyQualifiedTypeName name="com.aso.qe.framework.common.CommonActionHelper"/>
+<fullyQualifiedTypeName name="com.HnM.qe.test.pageobject.HnM_Home_PagePO"/>
+</qualifiedTypeNameHistroy>

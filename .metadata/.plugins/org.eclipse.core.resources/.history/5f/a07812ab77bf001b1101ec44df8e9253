@@ -1,0 +1,9 @@
+Feature: To Verify the Sanity of the HnM build
+
+  @Sanity  
+  Scenario: Verify Navigation from Homepage to L1
+    Given user launches the browser and navigates to "HnM_Home" page
+    Then User clicks on Customer Service Link
+   
+    
+ 

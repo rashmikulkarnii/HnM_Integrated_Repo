@@ -1,0 +1,97 @@
+package com.HnM.qe.test.pageobject;
+
+import static org.junit.Assert.assertTrue;
+import static org.testng.Assert.assertEquals;
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.UUID;
+
+import org.apache.log4j.Logger;
+import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
+
+import com.HnM.qe.framework.common.CommonActionHelper;
+
+public class HnM_Home_PagePO extends CommonActionHelper {
+	private static final Logger logger = Logger.getLogger(HnM_Home_PagePO.class);
+	
+	
+	
+		
+	@FindBy(xpath="//a[contains(text(),'Customer Service')]']")public WebElement lnkCustomerService;
+	
+	
+	public void clickCustomerLink()
+	{
+		clickOnLink(lnkCustomerService);
+	}
+	
+	
+	
+	
+	
+		
+		
+	
+		
+	
+		
+			
+	
+
+	
+//		public void addressBookDeatils(String exceptedAddressBookTxt) throws Exception {
+//			String actualAddressBookTxt = getText(addressBookTxt);
+//			logger.debug("addressbookTxt:: " + actualAddressBookTxt);
+//			Assert.assertEquals(actualAddressBookTxt, exceptedAddressBookTxt);
+//		}
+//
+//		
+
+//		public void clickMyAccountDropDown() throws Exception {
+//
+//			assertTrue(clickOnButton(myAccountDropDown));
+//
+//		}
+//		
+		
+		
+//		public void enterInvalidEmailAddressandPassword() throws Exception {
+//
+//			setInputText(txtEmailAddress, "rashika@gmail.com");
+//			setInputText(txtPassword, "rashika@123");
+//
+//		}
+
+
+//		
+//		
+//		public void enterEmailAddress_signup() throws Exception {
+//			
+//			 UUID uuid = UUID.randomUUID();
+//		     String randomUUIDString = uuid.toString();
+//		     
+//		     String txtemailaddress_random="abc"+randomUUIDString+"@gmail.com";
+//
+//			setInputText(txtEmail, txtemailaddress_random);
+//
+//		}
+		
+
+//	public void navigateToPLPViaClick_Desktop() throws Exception{
+//		
+//		assertTrue(clickOnButton(btnShopCategory));
+//		Actions hover = new Actions(getDriver());
+//		hover.moveToElement(btnClothingCategory).build().perform();
+//		//assertTrue(clickOnButton(btnMen_Clothing_Shop));
+//		assertTrue(clickOnButton(btnMensShirt_Men_Clothing_Shop));
+//	}
+//	
+	
+
+}

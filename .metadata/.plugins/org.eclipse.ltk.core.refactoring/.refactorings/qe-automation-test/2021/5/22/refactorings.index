@@ -1,0 +1,14 @@
+1622179195152	Rename package 'com.aso.qe.test.common'
+1622179209573	Rename package 'com.aso.qe.test.pageobject'
+1622179220102	Rename package 'com.aso.qe.test.stepdefinition.web'
+1622179228882	Rename package 'com.aso.qe.test.stepdefinition.api'
+1622179238910	Rename package 'com.aso.qe.test.stepdefinition.aem'
+1622179249365	Rename package 'com.aso.qe.test.stepdefinition.android'
+1622179258122	Rename package 'com.aso.qe.test.runner'
+1622179716502	Copy compilation unit
+1622179801846	Copy compilation unit
+1622182945734	Copy file
+1622182951406	Delete element
+1622184033884	Rename resource 'Sanity.feature'
+1622184076522	Copy file
+1622185167680	Rename resource 'Sanity_Jw.feature'

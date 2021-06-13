@@ -1,6 +1,6 @@
 Feature: [UI]- To Verify H&M Header Links in English
 
-  @Web @All @C-HP @H&MRegression @Header1 @Mobile
+  @Web @All @C-HP @H&MRegression @Header1 @sanity @BTENFAST-394_En @BTENFAST-TC-20  @Mobile
   Scenario Outline:  To Verify the Header link functionality
       Given user launches the browser and navigates to "H&M_HOME" page
       Then User clicks on Accept All Cookies
@@ -11,7 +11,7 @@ Feature: [UI]- To Verify H&M Header Links in English
        |SignIn|
        |Sign in1|
       
-  @H&MRegression @Mobile
+  @H&MRegression @sanity @BTENFAST-394 @BTENFAST-394_En  @BTENFAST-TC-19 @Mobile
  Scenario Outline:  To Verify that the user is able to create H&M Account
        
       Given user launches the browser and navigates to "H&M_HOME" page

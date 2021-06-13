@@ -128,6 +128,7 @@ public class R1SP1_Categories_ProductsByCategorySD extends JSONValidationUtils{
 	@Then("^read the ProductsByCategory json response$")
 	public void read_the_ProductsByCategory_json_response() throws Throwable {
 		productsByCategoryResponse = new ProductsByCategoryResponse(response.asString());
+		System.out.println("productsByCategoryResponse---"+ productsByCategoryResponse);
 	}
 	
 
